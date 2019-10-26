@@ -28,7 +28,42 @@
     </script>
   </head>
   <body>
-    <h1>Pings</h1>
-    <ul id='pings'></ul>
+    <h1>LOCATION VIEWER</h1>
+    X
+    <input type="text" placeholder="X Coordinate" id="xcoord">
+    Y
+    <input type="text" placeholder="Y Coordinate" id="ycoord">
+    Z
+    <input type="text" placeholder="Z Coordinate" id="zcoord">
+    ID
+    <input type="text" placeholder="Object id" id="idobject">
+    
+    <button type="button" onclick="sendData();">Send object location</button>
+    
+    <script>
+        function sendData(){
+            // Selecting the input element and get its value 
+            var x = document.getElementById("xcoord").value;
+            var y = document.getElementById("ycoord").value;
+            var z = document.getElementById("zcoord").value;
+            var id = document.getElementById("idobject").value;
+            
+            
+            var obj = '{'
+                       +'"x" : '+x+','
+                       +'"y" : '+y+','
+                       +'"z" : '+z+','
+                   +'"id" : '+id
+                       +'}';
+            
+           
+            ws.send(obj);
+            
+        }
+    </script>
+
+
+
+
   </body>
 </html>
