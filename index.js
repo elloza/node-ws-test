@@ -1,6 +1,8 @@
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 8080 });
+var HOST = location.origin.replace(/^http/, 'ws')
+
+const wss = new WebSocket.Server({host:HOST, port: PORT });
 
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(data) {
