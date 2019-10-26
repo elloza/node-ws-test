@@ -6,13 +6,13 @@
     "url": "https://github.com/elloza/node-ws-test.git"
   },
   "dependencies": {
-  	"bufferutil": "1.2.1",
+    "bufferutil": "1.2.1",
+    "express": "4.13.4",
     "utf-8-validate": "1.2.1",
-    "express": "^4.16.4",
-    "ws": "^7.0.1"
+    "ws": "1.1.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "6.2.0"
   },
   "scripts": {
     "start": "node index.js"
